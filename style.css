@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-1{
+    background-color:hsl(222, 26%, 31%);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.container{
+    max-width: 800px;
+    width: 600px;
+}
+
+.screen-1{
+    height: 160px;
+    background-color: hsl(224, 36%, 15%);
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.result{
+    position: absolute;
+    color: white;
+    font-weight: 700;
+    font-size: 64px;
+    right: 2.5rem;
+}
+
+.process{
+    position: absolute;
+    top: 1rem;
+    right: 2.5rem;
+    color: darkgray;
+}
+
+.keypad{
+    background-color: hsl(223, 31%, 20%);
+    margin-top: 2rem;
+    font-size: 32px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    height: 500px;
+    align-items: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    border-radius: 10px;
+}
+
+.btn{
+    background-color:  hsl(30, 25%, 89%);
+    color:  hsl(221, 14%, 31%);
+    border-bottom: 5px solid hsl(28, 16%, 65%);
+
+}
+
+.btn:hover{
+    background-color: white;
+}
+
+.btn-default{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0.5rem;
+    font-size: 32px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.del-btn{
+    background-color: hsl(225, 21%, 49%);
+    color: white;
+    border-bottom: 5px solid hsl(224, 28%, 35%);
+}
+
+.del-btn:hover{
+    background-color: hsl(223, 25%, 67%);
+}
+
+#reset-btn{
+    grid-column-start: 1;
+    grid-column-end: 3;   
+    background-color: hsl(225, 21%, 49%);
+    color: white;
+    border-bottom: 5px solid hsl(224, 28%, 35%);
+}
+
+#reset-btn:hover{
+    background-color: hsl(223, 25%, 67%);
+}
+
+#equal{
+    color: white;
+    background-color:  hsl(6, 63%, 50%);
+    grid-column-start: 3;
+    grid-column-end: 5;
+    border-bottom: 5px solid  hsl(6, 70%, 34%);
+}
+
+#equal:hover{
+    background-color:hsl(6, 68%, 61%) ;
+}
+
+
+@media(max-width:540px) {
+    .container{
+        width: 400px;
+        padding: 1rem;
+    }
+
+    .result{
+        font-size: 52px;
+    }
+
+    .keypad{
+        gap: 1rem;
+    }
+
+    .btn-default{
+        padding: 1rem;
+    }
+
+    .del-btn{
+        padding: 1rem;
+    }
+}
